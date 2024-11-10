@@ -1,12 +1,15 @@
 {
   "hosting": {
-    "public": "dist/coffeegames",
+    "public": "dist/coffeegames/browser",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {
         "source": "**",
-        "destination": "/index.html"
+        "function": "ssr"
       }
     ]
+  },
+  "functions": {
+    "source": "dist/coffeegames/server"
   }
 }
