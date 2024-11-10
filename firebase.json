@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "./dist/coffeegames",
+    "public": "dist/coffeegames",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {
