@@ -1,9 +1,10 @@
-'use strict';
-const express = require('express');
-const cors = require('cors');
-const bodyParser = require('body-parser');
-const testRoutes = require('./routes/index');
-const { onRequest } = require('firebase-functions/v2/https');
+/* eslint-disable @typescript-eslint/no-var-requires */
+"use strict";
+const express = require("express");
+const cors = require("cors");
+const bodyParser = require("body-parser");
+const testRoutes = require("./routes/index");
+const {onRequest} = require("firebase-functions/v2/https");
 
 const app = express();
 
