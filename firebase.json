@@ -15,10 +15,6 @@
   },
   "functions": [
     {
-      "source": "dist/coffeegames/server",
-      "codebase": "default"
-    },
-    {
       "source": "coffeegames-backend",
       "codebase": "coffeegames-backend",
       "ignore": [
