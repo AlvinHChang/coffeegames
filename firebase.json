@@ -1,7 +1,11 @@
 {
   "hosting": {
     "public": "dist/coffeegames/browser",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
     "rewrites": [
       {
         "source": "**",
@@ -9,7 +13,25 @@
       }
     ]
   },
-  "functions": {
-    "source": "dist/coffeegames/server"
-  }
+  "functions": [
+    {
+      "source": "dist/coffeegames/server",
+      "codebase": "default"
+    },
+    {
+      "source": "coffeegames-backend",
+      "codebase": "coffeegames-backend",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local"
+      ],
+      "predeploy": [
+        "npm --prefix \"$RESOURCE_DIR\" run lint",
+        "npm --prefix \"$RESOURCE_DIR\" run build"
+      ]
+    }
+  ]
 }
